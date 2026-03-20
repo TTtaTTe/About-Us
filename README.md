@@ -1,6 +1,6 @@
 # 🔍 다관점 문서 리뷰 에이전트 모음
 
-> 하나의 문서를 여러 전문가 관점에서 리뷰하고, 점수 기반으로 자동 반복 개선하는 Claude Code 에이전트입니다.
+> 하나의 문서를 여러 전문가 관점에서 리뷰하고, 점수 기반으로 자동 반복 개선하는 Claude Code 플러그인입니다.
 
 ## 왜 만들었나?
 
@@ -14,51 +14,63 @@ GPT에 올려보고, Claude에 올려보고, 다시 GPT에 올리면 — 서로 
 
 ---
 
-## 📁 프로젝트 구조
+## 🚀 설치 방법
+
+### 방법 1: 마켓플레이스 설치 (권장)
+
+Claude Code에서 아래 두 줄만 입력하면 됩니다:
 
 ```
-About-Us/
-├── README.md                          ← 지금 보고 있는 파일
-├── agents/                            ← 에이전트 본체 (여기가 핵심)
-│   └── report-reviewer.md             ← 보고서 리뷰 에이전트 v2.0
-└── guides/                            ← 설치 및 사용 가이드
-    └── 설치가이드.md
+/plugin marketplace add TTtaTTe/About-Us
+/plugin install report-reviewer
 ```
 
----
+끝! 이후에는 `보고서 리뷰해줘`라고 말하면 자동으로 실행됩니다.
 
-## 🚀 빠른 시작
+업데이트가 나오면 자동으로 반영됩니다:
+```
+/plugin marketplace update about-us
+```
 
-### 1. 파일 다운로드
-이 레포를 클론하거나, `agents/report-reviewer.md` 파일만 다운받으세요.
+### 방법 2: 수동 설치
 
-### 2. 에이전트 등록
-다운받은 `.md` 파일을 아래 폴더에 복사합니다:
+`plugins/report-reviewer/agents/report-reviewer.md` 파일을 다운받아서  
+아래 폴더에 복사합니다:
 
 | OS | 경로 |
 |----|------|
 | Windows | `C:\Users\내이름\.claude\agents\` |
 | Mac | `~/.claude/agents/` |
 
-> 💡 폴더가 없으면 새로 만드세요 (`.claude` → `agents`)
+---
 
-### 3. 사용
-Claude Code를 열고 이렇게 말하면 됩니다:
+## 📁 프로젝트 구조
 
 ```
-보고서 리뷰해줘
+About-Us/
+├── .claude-plugin/
+│   └── marketplace.json                ← 마켓플레이스 카탈로그
+├── plugins/
+│   └── report-reviewer/                ← 보고서 리뷰 플러그인
+│       ├── .claude-plugin/
+│       │   └── plugin.json             ← 플러그인 매니페스트
+│       └── agents/
+│           └── report-reviewer.md      ← 에이전트 본체 v2.0
+├── guides/
+│   └── 설치가이드.md
+└── README.md
 ```
 
 ---
 
-## 📋 에이전트 목록
+## 📋 플러그인 목록
 
-| 에이전트 | 파일 | 용도 | 상태 |
+| 플러그인 | 용도 | 버전 | 상태 |
 |----------|------|------|------|
-| 보고서 리뷰어 v2.0 | [`report-reviewer.md`](agents/report-reviewer.md) | 보고서/분석 자료 다관점 리뷰 | ✅ 사용 가능 |
-| 기획서 리뷰어 | `proposal-reviewer.md` | 기획서/제안서 리뷰 | 🔜 예정 |
-| 기술문서 리뷰어 | `tech-doc-reviewer.md` | 기술 문서 리뷰 | 🔜 예정 |
-| 마케팅 자료 리뷰어 | `marketing-reviewer.md` | 마케팅/홍보 자료 리뷰 | 🔜 예정 |
+| `report-reviewer` | 보고서/분석 자료 다관점 리뷰 | v2.0 | ✅ 사용 가능 |
+| `proposal-reviewer` | 기획서/제안서 리뷰 | — | 🔜 예정 |
+| `tech-doc-reviewer` | 기술 문서 리뷰 | — | 🔜 예정 |
+| `marketing-reviewer` | 마케팅/홍보 자료 리뷰 | — | 🔜 예정 |
 
 ---
 
@@ -131,6 +143,7 @@ P1만 적용해줘                          ← 긴급 항목만 수정
 
 - [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) — 127개 이상의 Claude Code subagent 컬렉션
 - [Anthropic 공식 문서 - Custom Subagents](https://code.claude.com/docs/en/sub-agents) — subagent 제작 가이드
+- [Anthropic 공식 문서 - Plugin Marketplace](https://code.claude.com/docs/en/plugin-marketplaces) — 마켓플레이스 구축 가이드
 - [Anthropic Agent SDK Demos](https://github.com/anthropics/claude-agent-sdk-demos) — 공식 데모 모음
 
 ---
@@ -143,6 +156,15 @@ P1만 적용해줘                          ← 긴급 항목만 수정
 
 ---
 
+## 🤝 기여
+
+새로운 리뷰어 플러그인을 추가하거나 기존 에이전트를 개선하고 싶다면:
+1. 이 레포를 Fork
+2. `plugins/` 아래에 새 플러그인 폴더 생성
+3. Pull Request 제출
+
+---
+
 ## 📝 라이선스
 
-자유롭게 사용, 수정, 배포할 수 있습니다.
+MIT License — 자유롭게 사용, 수정, 배포할 수 있습니다.

@@ -1,0 +1,34 @@
+{
+  "name": "about-us",
+  "owner": {
+    "name": "TTtaTTe",
+    "url": "https://github.com/TTtaTTe"
+  },
+  "description": "다관점 문서 리뷰 에이전트 모음 — 하나의 문서를 여러 전문가 시각에서 리뷰하고 자동 반복 개선합니다.",
+  "plugins": [
+    {
+      "name": "report-reviewer",
+      "source": {
+        "source": "github",
+        "repo": "TTtaTTe/About-Us",
+        "path": "./plugins/report-reviewer"
+      },
+      "version": "2.0.0",
+      "description": "보고서를 전략가/분석가/독자 3관점에서 리뷰하고 점수 기반으로 자동 반복 개선하는 에이전트",
+      "author": {
+        "name": "TTtaTTe"
+      },
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": [
+        "review",
+        "report",
+        "multi-perspective",
+        "document",
+        "korean",
+        "리뷰",
+        "보고서"
+      ]
+    }
+  ]
+}
