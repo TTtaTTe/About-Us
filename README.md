@@ -49,13 +49,16 @@ Claude Code에서 아래 두 줄만 입력하면 됩니다:
 ```
 About-Us/
 ├── .claude-plugin/
-│   └── marketplace.json                ← 마켓플레이스 카탈로그
-├── plugins/
-│   └── report-reviewer/                ← 보고서 리뷰 플러그인
-│       ├── .claude-plugin/
-│       │   └── plugin.json             ← 플러그인 매니페스트
-│       └── agents/
-│           └── report-reviewer.md      ← 에이전트 본체 v2.0
+│   └── marketplace.json               ← 마켓플레이스 카탈로그
+├── report-reviewer/                   ← 보고서 리뷰 플러그인
+│   ├── .claude-plugin/
+│   │   └── plugin.json                ← 플러그인 매니페스트
+│   ├── agents/
+│   │   └── report-reviewer.md         ← 에이전트 본체 v2.0
+│   ├── skills/
+│   │   └── report-review/
+│   │       └── SKILL.md               ← Cowork 스킬 정의
+│   └── README.md
 ├── guides/
 │   └── 설치가이드.md
 └── README.md
