@@ -1,6 +1,8 @@
 ---
 name: report-review
 description: "보고서를 전략가/분석가/독자 3관점에서 리뷰하고 점수 기반으로 자동 반복 개선합니다. '보고서 리뷰', '문서 리뷰', '다관점 리뷰'라고 말하면 자동 실행됩니다."
+user-invocable: true
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 
 # 보고서 다관점 리뷰

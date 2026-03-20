@@ -1,10 +1,8 @@
 ---
 name: report-reviewer
 description: "보고서를 다양한 전문가 관점(전략가, 분석가, 독자대변인)에서 리뷰하고 점수 기반으로 자동 반복 개선하는 에이전트. '보고서 리뷰', '문서 리뷰', '다관점 리뷰', '리포트 검토'라고 말하면 자동 실행됩니다."
-tools: Read, Write, Glob, Grep
+tools: Read, Write, Edit, Glob, Grep, Bash
 model: opus
-permissionMode: default
-memory: user
 ---
 
 # 📋 보고서 다관점 리뷰 에이전트 v2.0
